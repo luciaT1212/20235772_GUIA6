@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Estudiante</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f2f5;
+            margin: 0;
+        }
+        form {
+            background-color: #ffffff;
+            max-width: 500px;
+            width: 100%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            text-align: center;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: 500;
+            color: #555555;
+            margin-top: 15px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .error {
+            color: #e74c3c;
+            font-size: 0.85em;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="estudianteForm">
+        <h2>Ficha de Estudiante</h2>
+        <label for="carnet">Carnet (Ejemplo: AB001)</label>
+        <input type="text" id="carnet" name="carnet">
+        <div id="carnetError" class="error"></div>
+
+        <label for="nombreCompleto">Nombre Completo</label>
+        <input type="text" id="nombreCompleto" name="nombreCompleto">
+        <div id="nombreCompletoError" class="error"></div>
+
+        <label for="dui">Número de DUI (Ejemplo: 12345678-9)</label>
+        <input type="text" id="dui" name="dui">
+        <div id="duiError" class="error"></div>
+
+        <label for="nit">Número de NIT (Ejemplo: 1234-567890-123-1)</label>
+        <input type="text" id="nit" name="nit">
+        <div id="nitError" class="error"></div>
+
+        <label for="fechaNacimiento">Fecha de Nacimiento (dd/mm/yyyy)</label>
+        <input type="text" id="fechaNacimiento" name="fechaNacimiento" placeholder="dd/mm/yyyy">
+        <div id="fechaNacimientoError" class="error"></div>
+
+        <label for="correo">Correo Electrónico</label>
+        <input type="email" id="correo" name="correo">
+        <div id="correoError" class="error"></div>
+
+        <label for="edad">Edad</label>
+        <input type="text" id="edad" name="edad">
+        <div id="edadError" class="error"></div>
+
+        <button type="button" onclick="validarFormulario()">Enviar</button>
+    </form>
+
+    <script src="validacion_estudiante.js"></script>
+</body>
+</html>
